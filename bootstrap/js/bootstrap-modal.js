@@ -1,5 +1,5 @@
 /* =========================================================
- * bootstrap-modal.js v2.3.0
+ * bootstrap-modal.js v3.0.0
  * http://twitter.github.com/bootstrap/javascript.html#modals
  * =========================================================
  * Copyright 2012 Twitter, Inc.
@@ -148,7 +148,7 @@
       }
 
     , removeBackdrop: function () {
-        this.$backdrop.remove()
+        this.$backdrop && this.$backdrop.remove()
         this.$backdrop = null
       }
 
@@ -242,6 +242,10 @@
       .one('hide', function () {
         $this.focus()
       })
-  })
+    })
+
+    var $body = $(document.body)
+      .on('shown', '.modal', function () { $body.addClass('modal-open') })
+      .on('hidden', '.modal', function () { $body.removeClass('modal-open') })
 
 }(window.jQuery);
