@@ -1,8 +1,8 @@
 <?php
 function f_2046_add_scripts() {
 	wp_deregister_script( 'jquery' );
-	wp_register_script ( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js');
-	wp_register_style ( 'bootstrap-css', get_bloginfo('template_directory') .'/bootstrap/css/bootstrap.css');
+	wp_register_script ( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js');
+	wp_register_style ( 'bootstrap-css', get_bloginfo('template_directory') .'/bootstrap/css/bootstrap.min.css');
 	wp_register_style ( 'easy-css', get_bloginfo('template_directory') .'/style.css', array('bootstrap-css'));
 	
 	wp_enqueue_script( 'jquery' );

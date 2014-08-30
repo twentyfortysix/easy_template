@@ -17,7 +17,7 @@
 		<div class="wrapper">
 			<div class="container">
 				<div class="row">
-					<div class="col-span-12">
+					<div class="col-md-12">
 						<?php
 						// get widgets, most likely a header image or something like that
 						dynamic_sidebar('header-top');

@@ -5,7 +5,7 @@ get_header();
 if ( is_active_sidebar('extra-top-content') ){
 	echo '<div class="container">
 		<div class="row">
-			<div class="col-span-12">';
+			<div class="col-md-12">';
 				dynamic_sidebar('extra-top-content');
 			echo '</div>
 		</div>
@@ -14,10 +14,10 @@ if ( is_active_sidebar('extra-top-content') ){
 ?>
 <div class="container">
 	<div class="row">
-		<div class="col-span-6">
+		<div class="col-md-6">
 			<?php
 			// get some extra content, most likely carousel or that sort of content
-			dynamic_sidebar('extra-top-content');
+			// dynamic_sidebar('extra-top-content');
 			// get the base content
 			if ( have_posts() ) {
 				while ( have_posts() ) {
@@ -29,13 +29,13 @@ if ( is_active_sidebar('extra-top-content') ){
 			}
 			?>
 		</div>
-		<div class="col-span-3">
+		<div class="col-md-3">
 			<?php 
 			// get the content of the dynamic sidebar (widgets)
 			dynamic_sidebar('index-second-column');
 			 ?>
 		</div>
-		<div class="col-span-3">
+		<div class="col-md-3">
 			<?php 
 			// get the content of the dynamic sidebar (widgets)
 			dynamic_sidebar('index-third-column');

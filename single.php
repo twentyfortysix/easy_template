@@ -4,7 +4,7 @@ get_header();
 ?>
 <div class="container">
 	<div class="row">
-		<div class="col-span-6">
+		<div class="col-md-6">
 			<?php
 			// get the base content
 			if ( have_posts() ) {
@@ -16,13 +16,13 @@ get_header();
 			}
 			?>
 		</div>
-		<div class="col-span-3">
+		<div class="col-md-3">
 			<?php 
 			// get the content of the dynamic sidebar (widgets)
 			dynamic_sidebar('single-second-column');
 			 ?>
 		</div>
-		<div class="col-span-3">
+		<div class="col-md-3">
 			<?php 
 			// get the content of the dynamic sidebar (widgets)
 			dynamic_sidebar('single-third-column');
