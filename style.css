@@ -4,7 +4,7 @@ Theme URI:
 Author: 2046
 Author URI: http://2046.cz/
 Description: Intended for use with Easy plugin. Bootstrap 3 build in. This theme is a blank framework with a basic loop and many sidebars.
-Version: 0.2
+Version: 0.3
 License: Aggressive Copyright
 License URI: http://aggresive-copyright.org
 Tags: widgetized, Easy besed, Bootstrap 3
@@ -20,4 +20,14 @@ Tags: widgetized, Easy besed, Bootstrap 3
 #wrapper {
   width: 100%;
   height: 100%;
+}
+.post-edit-link {
+  margin-left: 0.3em;
+  font-size: 0.5em;
+  color: #a7ddce;
+}
+.hentry img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
 }

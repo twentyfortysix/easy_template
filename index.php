@@ -22,13 +22,26 @@ if ( is_active_sidebar('extra-top-content') ){
 			if ( have_posts() ) {
 				while ( have_posts() ) {
 					the_post(); 
-					echo '<h2><a href="'.get_permalink().'">'.get_the_title().'</a></h2>';
+					echo '<div ';
+					post_class( );
+					echo '>';
+					echo '<h2><a href="'.get_permalink().'">'.get_the_title().'</a>';
+					edit_post_link('edit');
+					echo '</h2>';
 					the_content();
-					edit_post_link();
+					echo '</div>';
 				}
 			}
-			?>
-		</div>
+			
+			if(function_exists('wp_pagenavi')) : ?>
+            <div class="navigation">
+				<?php wp_pagenavi(); ?>
+	                           </div>
+				<?php else : ?>
+					<div class="alignleft"><?php next_posts_link(__('&laquo; Older Entries')); ?></div>
+					<div class="alignright"><?php previous_posts_link(__('Newer Entries &raquo;')); ?></div>
+				<?php endif; ?>
+			</div>
 		<div class="col-md-3">
 			<?php 
 			// get the content of the dynamic sidebar (widgets)
